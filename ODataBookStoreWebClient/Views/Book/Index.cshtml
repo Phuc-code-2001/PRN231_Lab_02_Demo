@@ -1,0 +1,33 @@
+﻿@using ODataBookStore.EDM
+@{
+	ViewData["Title"] = "BookStore";
+}
+@model IEnumerable<Book>
+
+<h1 class="text-primary text-center">Book List</h1>
+<hr />
+<table class="table table-striped text-center">
+
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Price</th>
+			<th>ISBN</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(Book book in Model)
+		{
+			<tr>
+				<td>@book.Id</td>
+				<td>@book.Title</td>
+				<td>@book.Author</td>
+				<td>@book.Price</td>
+				<td>@book.ISBN</td>
+			</tr>
+		}
+	</tbody>
+
+</table>
